@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+</head>
+<body>
+    <script>
+       
+        let number = Math.floor((Math.random()*1001));
+    
+        var stringnum = String(number);
+        var br = "<br>";
+
+        if(stringnum.length == 3)
+        {
+        var hundred = Math.floor((number%1000)/100)*100;
+        var ten = Math.floor((number%100)/10)*10;
+        var one = Math.floor((number%10));
+        document.write("Randomly generated number: " + number + br + "Breakdown: " + hundred + ", " + ten + ", " + one);
+    }
+
+        if(stringnum.length == 2)
+        {
+        var ten = Math.floor((number%100)/10)*10;
+        var one = Math.floor((number%10));
+        document.write("Randomly generated number: " + number + br + "Breakdown: " + ten + ", " + one); 
+        }
+
+        if(stringnum.length == 1)
+        {
+        var one = Math.floor((number%10));
+        document.write("Randomly generated number: " + number + br + "Breakdown: " + one); 
+        }
+
+        
+       var date = new Date();
+       document.write(br + "Date: " + date);
+
+    </script>
+</body>
+</html>
